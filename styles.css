@@ -2925,12 +2925,31 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   display: block;
 }
 
+.form #item-select {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
 .form input {
   display: block;
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
+}
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  height: 100px;
+  text-align: left;
+  resize: none;
+  overflow: hidden;
+  outline: none;
 }
 .form label {
   display: block;

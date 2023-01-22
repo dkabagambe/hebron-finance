@@ -279,17 +279,28 @@
           <!-- ------------------ -->
           <div class="progress-step active" data-title="Name"></div>
           <div class="progress-step" data-title="Contact"></div>
-          <div class="progress-step" data-title="Id"></div>
-          <div class="progress-step" data-title="Password"></div>
+          <div class="progress-step" data-title="business"></div>
+          <div class="progress-step" data-title="funds"></div>
         </div>
         <div class="form-step active">
           <div class="input-group">
-            <label for="username">First Name</label>
-            <input type="text" id="username" name="username" />
+            <label for="item-select">How long have you been in business?</label>
+            <select id="item-select" name="item">
+              <option value="item1">-select-</option>
+              <option value="item2">Less than 12 months</option>
+              <option value="item3">Between 12 and 24 Months</option>
+              <option value="item3">More than 24 Months</option>
+            </select>
           </div>
           <div class="input-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" />
+            <label for="lname">Loan Amount</label>
+            <input
+              type="number"
+              id="lname"
+              name="lname"
+              placeholder="$50,000"
+              min="$50,000"
+            />
           </div>
           <div class="">
             <a href="#" class="btn btn-next with-50 ml-auto">Next</a>
@@ -298,27 +309,148 @@
         <!-- ------------------------------------ -->
         <div class="form-step">
           <div class="input-group">
-            <label for="phone">phone</label>
-            <input type="text" id="phone" name="phone" />
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div class="input-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" />
           </div>
           <div class="input-group">
             <label for="email">email</label>
             <input type="email" id="email" name="email" />
           </div>
+          <div class="input-group">
+            <label for="phone">phone</label>
+            <input type="text" id="phone" name="phone" />
+          </div>
+          <div class="input-group">
+            <label for="item-select">Job role</label>
+            <select id="item-select" name="item">
+              <option value="item1">-select-</option>
+              <option value="item2">owner</option>
+              <option value="item3">senior leader</option>
+              <option value="item4">Manager</option>
+              <option value="item5">Employee</option>
+              <option value="item6">professor/student</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="item-select"
+              >How did your hear about Hebron Finance</label
+            >
+            <select id="item-select" name="item">
+              <option value="item1">-select-</option>
+              <option value="item2">
+                professional(accountant,notary,lawyer,...)
+              </option>
+              <option value="item3">
+                Enterprenuer,colleague,friend or family
+              </option>
+              <option value="item4">financial institution</option>
+              <option value="item5">Government</option>
+              <option value="item6">
+                website (other than hebronfinance.com)
+              </option>
+              <option value="item7">social Media</option>
+              <option value="item8">web search</option>
+              <option value="item9">Online advertising</option>
+              <option value="item10">Print advertising</option>
+              <option value="item11">Events</option>
+              <option value="item12">Email</option>
+              <option value="item13">
+                other - specify(tv,radio,billboard,...)
+              </option>
+            </select>
+          </div>
+
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
             <a href="#" class="btn btn-next">Next</a>
           </div>
         </div>
         <!-- ------------------------------------ -->
+
         <div class="form-step">
+          <h3>Tell us about your business</h3>
           <div class="input-group">
-            <label for="dob">Date of birth</label>
+            <label for="fname">Company Name</label>
+            <input
+              type="text"
+              id="cname"
+              name="cname"
+              placeholder="Name of your company"
+            />
+          </div>
+          <div class="input-group">
+            <label for="item-select">Business Type</label>
+            <select id="item-select" name="item">
+              <option value="item1">-select-</option>
+              <option value="item2">sole proprietorship</option>
+              <option value="item3">General partnership</option>
+              <option value="item4">Company or Corporation(For Profit)</option>
+              <option value="item5">
+                Organization or Corporation( Not For Profit)
+              </option>
+              <option value="item6">Cooperative</option>
+              <option value="item7">Limited Partnership</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="item-select">Industry</label>
+            <select id="item-select" name="item">
+              <option value="item1">-select-</option>
+              <option value="item2">Business Services</option>
+              <option value="item3">Manufacturing</option>
+              <option value="item4">Construction & Engineering</option>
+              <option value="item5">Consulting Services</option>
+              <option value="item6">Energy</option>
+              <option value="item7">Financial Services</option>
+              <option value="item8">Retail</option>
+              <option value="item9">Accommodation and food services</option>
+              <option value="item10">Transport & warehousing</option>
+              <option value="item11">Technology</option>
+              <option value="item12">Tourism</option>
+              <option value="item13">Wholesale</option>
+              <option value="item14">Other</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="dob">Established in</label>
             <input type="date" id="dob" name="dob" />
           </div>
           <div class="input-group">
-            <label for="id">National Id</label>
+            <label for="id">Number of employees (including yourself)</label>
             <input type="number" id="id" name="id" />
+          </div>
+          <div class="input-group">
+            <label for="id">Annual Sales (in USD)</label>
+            <input type="number" id="id" name="id" placeholder="$" />
+          </div>
+          <p>address</p>
+          <div class="input-group">
+            <label for="address">Address Line 1</label>
+            <input type="text" id="id" name="address" />
+          </div>
+          <div class="input-group">
+            <label for="address">Address Line 2</label>
+            <input type="text" id="id" name="address" />
+          </div>
+          <div class="input-group">
+            <label for="address">City</label>
+            <input type="text" id="id" name="address" />
+          </div>
+          <div class="input-group">
+            <label for="address">State</label>
+            <input type="text" id="id" name="address" />
+          </div>
+          <div class="input-group">
+            <label for="address">Zip Code</label>
+            <input type="text" id="id" name="address" />
+          </div>
+          <div class="input-group">
+            <label for="address">Country</label>
+            <input type="text" id="id" name="address" />
           </div>
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
@@ -327,17 +459,62 @@
         </div>
         <!-- ------------------------------------ -->
         <div class="form-step">
+          <h3>When do you need the funds?</h3>
           <div class="input-group">
-            <label for="Password">Password</label>
-            <input type="Password" id="Password" name="Password" />
+            <label for="item-select">How long have you been in business?</label>
+            <select id="item-select" name="item">
+              <option value="item1">-select-</option>
+              <option value="item2">Less than 12 months</option>
+              <option value="item3">Between 12 and 24 Months</option>
+              <option value="item3">More than 24 Months</option>
+            </select>
           </div>
           <div class="input-group">
-            <label for="confirmPassword"> confirm Password</label>
-            <input
-              type="confirmPassword"
-              id="confirmPassword"
-              name="confirmPassword"
-            />
+            <label for="confirmPassword">
+              Tell us about your project and how the loan will be used</label
+            >
+            <textarea
+              name=""
+              placeholder="short and precise ,please"
+            ></textarea>
+          </div>
+          <div class="input-group">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                style="height: 40px; width: 40px; margin-right: 10px"
+              />
+              <label for="myCheckbox" style="margin-left: 15px">
+                I consent to have this website store my submitted information so
+                they can respond to my inquiry</label
+              >
+            </div>
+          </div>
+          <div class="input-group">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                style="height: 40px; width: 40px; margin-right: 10px"
+              />
+              <label for="myCheckbox" style="margin-left: 15px">
+                I have read and agree to the Terms and Conditions and Privacy
+                Policy</label
+              >
+            </div>
           </div>
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
