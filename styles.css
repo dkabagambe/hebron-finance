@@ -142,30 +142,30 @@ nav ul li button:hover {
     display: flex;
     cursor: pointer;
   }
-  nav {
-    flex-wrap: nowrap; /* Keep nav items on the same line */
-  }
+
   nav ul {
     position: absolute;
     display: flex;
-    flex-basis: 100%; /* Make each nav item take up full width */
     flex-direction: column;
     top: 5vh;
-    right: 0;
     height: 80vh;
-    width: 100vw;
-    align-items: flex-start;
+    width: 50vw;
+    align-items: center;
     text-align: center;
     justify-content: center;
     transition: right 0.3s ease-in;
     background-color: transparent;
-    transform: translateX(100%);
+    transform: translateX(200%);
     background-color: #cacaca;
-    margin: 2px;
+    margin: 5px;
+    text-overflow: ellipsis;
+
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   }
 
   nav ul li ul {
-    margin: 0px;
+    margin: 5px;
     text-decoration: none;
     text-align: center;
     display: block;
@@ -176,8 +176,8 @@ nav ul li button:hover {
   nav ul li ul li a {
     font-size: 14px;
     display: block;
-    position: absolute;
-    top: 0;
+    position: relative;
+    height: 100%;
   }
   .show {
     transform: translateX(-60%);
@@ -2196,155 +2196,6 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
     align-items: center;
   }
 }
-/* eligibility */
-.eligibility {
-  height: auto;
-  width: 100%;
-  margin-top: 12vh;
-  margin-left: 20px;
-  margin-right: 20px;
-  position: relative;
-  margin-bottom: 10px;
-}
-.eligibility1 {
-  height: auto;
-  margin: 20px 0px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-}
-.eligibility1 > h3 {
-  font-size: 5rem;
-  line-height: normal;
-  font-weight: 400;
-  padding-top: 30px;
-  font-family: serif;
-}
-.eligibility1 > p {
-  font-size: 24px;
-  padding-top: 20px;
-  text-align: center;
-}
-/* progress bar styles */
-/* #percentage {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-/* progress bar styles */
-.progressbar {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 0 4rem 0;
-  counter-reset: step;
-}
-.progressbar::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #dcdcdc;
-  height: 4px;
-  width: 100%;
-}
-.progress-step {
-  width: 35px;
-  height: 35px;
-  background-color: #dcdcdc;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-.progress-step::before {
-  counter-increment: step;
-  content: counter(step);
-}
-
-.progress-step::after {
-  content: attr(data-title);
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  font-size: 0.8rem;
-  color: #666666;
-}
-.progress-step.active {
-  background-color: #1c00ff;
-  color: #f3f3f3;
-  text-align: center;
-}
-.progress {
-  background-color: blue;
-  width: 0%;
-  transition: 0.3s ease-in-out;
-}
-.form {
-  width: clamp(320px, 30%, 430px);
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  border-radius: 0.35rem;
-  padding: 1.5rem;
-  background-color: rgba(128, 128, 128, 0.92);
-  box-shadow: 2px 4px 11px -1px #000000;
-}
-.form .form-step {
-  display: none;
-}
-.form .active {
-  display: block;
-}
-
-.form input {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-}
-.form label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.form .text-center {
-  text-align: center;
-  color: #2c3e50;
-}
-.input-group {
-  margin: 2rem 0;
-}
-.form .btn {
-  padding: 0.75rem;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  background-color: blue;
-  color: white;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: all 250ms ease-in-out;
-}
-.form .btn:hover {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px blue;
-}
-.form .btn:active {
-  transform: scale(0.98);
-}
-.with-50 {
-  width: 50%;
-}
-.ml-auto {
-  margin-left: auto;
-}
-.form .btns-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
 /* .........this is where the small business for financing styling starts from............... */
 .smallbusiness {
   display: flex;
@@ -2957,4 +2808,154 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
     text-align: center;
   }
 }
-/* =============styling for svg============= */
+
+/* eligibility */
+.eligibility {
+  height: auto;
+  width: 100%;
+  margin-top: 12vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.eligibility1 {
+  height: auto;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.eligibility1 > h3 {
+  font-size: 5rem;
+  line-height: normal;
+  font-weight: 400;
+  padding-top: 30px;
+  font-family: serif;
+}
+.eligibility1 > p {
+  font-size: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+/* progress bar styles */
+/* #percentage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* progress bar styles */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 4rem 0;
+  counter-reset: step;
+}
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #dcdcdc;
+  height: 4px;
+  width: 100%;
+}
+.progress-step {
+  width: 35px;
+  height: 35px;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.8rem;
+  color: #666666;
+}
+.progress-step.active {
+  background-color: #1c00ff;
+  color: #f3f3f3;
+  text-align: center;
+}
+.progress {
+  background-color: blue;
+  width: 0%;
+  transition: 0.3s ease-in-out;
+}
+.form {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  background-color: rgba(128, 128, 128, 0.92);
+  box-shadow: 2px 4px 11px -1px #000000;
+}
+.form .form-step {
+  display: none;
+}
+.form .active {
+  display: block;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form .text-center {
+  text-align: center;
+  color: #2c3e50;
+}
+.input-group {
+  margin: 2rem 0;
+}
+.form .btn {
+  padding: 0.75rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.form .btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px blue;
+}
+.form .btn:active {
+  transform: scale(0.98);
+}
+.with-50 {
+  width: 50%;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.form .btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
