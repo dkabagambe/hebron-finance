@@ -149,39 +149,59 @@ nav ul li button:hover {
 
   nav ul {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    padding-top: 5vh;
     top: 5vh;
-    height: 80vh;
-    width: 50vw;
-    align-items: center;
+    width: 100%;
     text-align: center;
-    justify-content: center;
-    transition: right 0.3s ease-in;
-    background-color: transparent;
-    transform: translateX(120%);
-    background-color: #cacaca;
-    margin: 5px;
-
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    background-color: #fff;
+    overflow-y: auto;
+    text-align: center;
+    min-width: 100%;
+    margin-left: 15px;
   }
-
+  nav ul li:hover ul {
+    display: inline;
+    min-width: 100%;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    position: relative;
+    padding-top: 0;
+    background: #ffffff;
+    overflow: auto;
+    min-height: auto;
+  }
   nav ul li ul {
-    margin: 0px;
-    padding: 0;
-    text-decoration: none;
+    position: relative;
+    z-index: 10;
     text-align: center;
-    display: block;
+    max-height: 90vh;
+    text-align: center;
+    transform: translateX(50%);
+    min-width: 100%;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    background: inherit;
+    top: 0;
   }
+
   nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
+    max-height: auto;
+    text-align: center;
   }
   nav ul li ul li a {
-    font-size: 14px;
     display: block;
     position: relative;
-    height: 100%;
+    overflow: auto;
+    max-height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    margin-right: 0px;
   }
   .show {
     transform: translateX(-60%);
