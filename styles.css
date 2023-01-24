@@ -59,7 +59,7 @@ nav ul {
 
 nav ul li {
   position: relative;
-  margin-right: 20px;
+  margin-right: 10px;
   list-style: none;
   color: #ffffff;
   padding: 14px 24px;
@@ -68,6 +68,10 @@ nav ul li {
 nav ul li:hover {
   border-bottom: 1px solid blue;
   transition: 0.5s linear;
+  width: auto;
+}
+nav ul li button a:hover {
+  border-bottom: none;
 }
 
 nav ul li ul {
@@ -86,13 +90,13 @@ nav ul li ul {
 nav ul li:hover ul {
   display: block;
   width: 100%;
+  margin-bottom: 1px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: black;
   display: block;
-  font-size: 15px;
+  font-size: 14px;
   transition: 0.3s linear;
   text-decoration: none !important;
   color: #fb9405;
@@ -101,12 +105,12 @@ nav ul li a {
 
 nav ul li button {
   background-color: blue;
-  padding: 10px 10px;
+  padding: 10px;
   font-weight: 600;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 15px;
 }
 nav ul li button:hover {
   background-color: #000;
@@ -155,17 +159,17 @@ nav ul li button:hover {
     justify-content: center;
     transition: right 0.3s ease-in;
     background-color: transparent;
-    transform: translateX(200%);
+    transform: translateX(120%);
     background-color: #cacaca;
     margin: 5px;
-    text-overflow: ellipsis;
 
     /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   }
 
   nav ul li ul {
-    margin: 5px;
+    margin: 0px;
+    padding: 0;
     text-decoration: none;
     text-align: center;
     display: block;
@@ -2916,6 +2920,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   top: calc(100% + 0.5rem);
   font-size: 0.8rem;
   color: #666666;
+  text-align: center;
 }
 .progress-step.active {
   background-color: #1c00ff;
