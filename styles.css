@@ -803,11 +803,11 @@ footer {
   font-weight: 500;
   margin-left: 10px;
 }
-@media (max-width: 850px) footer {
-  width: 95%;
-}
 
- {
+@media (max-width: 850px) {
+  footer {
+    width: 95%;
+  }
   .countries {
     display: flex;
     flex-direction: column;
@@ -3127,3 +3127,12 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+
+/* ...these are styling for the 3 elements on the home page................ */
+/* 
+#ut_bi_63d4f84ce3f28 .bklyn-big-icon svg {
+  transform: scale(3.6);
+}
+#ut-svg-63d4f84ce3f3f.ut-svg-loaded {
+  display: block;
+} */
