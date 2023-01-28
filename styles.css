@@ -3136,3 +3136,15 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
 #ut-svg-63d4f84ce3f3f.ut-svg-loaded {
   display: block;
 } */
+
+#translate-button {
+  position: fixed; /* positioned relative to the viewport */
+  bottom: 30px; /* distance from the bottom */
+  left: 30px; /* distance from the left */
+  z-index: 100; /* places the button on top of other elements */
+  width: 200px;
+  border: 3px solid blue;
+}
+#google_translate_element {
+  font-size: 2rem !important;
+}
