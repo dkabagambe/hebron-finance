@@ -14,20 +14,20 @@ if(isset($_POST['submit'])){
     $hearing_source = $_POST["item-hearing-source"];
     $cname = $_POST["cname"];
     $business_type = $_POST["business_type"];
-    $business_tax_id = $_POST["employee_count"];
     $business_established = $_POST["established_date"];
     $business_address = $_POST["address_line_1"];
     $business_address1 = $_POST['address_line_2'];
     $business_city = $_POST["city"];
-    $business_state = $_POST["business-state"];
+    $business_state = $_POST["state"];
     $business_zip = $_POST["zip_code"];
     $business_country = $_POST["country"];
     $annual_revenue = $_POST["annual_sales"];
     $time_in_business = $_POST["business_tenure"];
     $industry = $_POST["industry"];
-    $number_of_employees = $_POST["number-of-employees"];
+    $number_of_employees = $_POST["employee_count"];
+    $project_description=$_POST['project_description'];
 
- $subject = "Business Loan Request";
+   $subject = "Business Loan Request";
     $message = "A user has submitted a business loan request with the following details:
     
     Business Period: $business_period
@@ -40,7 +40,6 @@ if(isset($_POST['submit'])){
      How did you hear about Hebron Finance?: $hearing_source
      Company Name: $cname
      Business Type: $business_type
-     Business Tax ID: $business_tax_id
      Business Established: $business_established
      Business Address: $business_address
      Business Address1: $business_address1
@@ -51,6 +50,7 @@ if(isset($_POST['submit'])){
      Time in Business: $time_in_business
      Industry: $industry
      Number of Employees: $number_of_employees
+     Project_description:$project_description
      ";
     $headers = 'From:' . $from;
     mail($to,$subject,$message,$headers);
