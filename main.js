@@ -136,3 +136,38 @@ function googleTranslateElementInit() {
     "google_translate_element"
   );
 }
+//validate the form
+$(document).ready(function () {
+  $(".form").submit(function (e) {
+    e.preventDefault();
+    var businessPeriod = $("#business-period").val();
+    var loanAmount = $("#loan-amount").val();
+    var firstName = $("#first-name").val();
+    var lastName = $("#last-name").val();
+    var emailAddress = $("#email-address").val();
+    var phoneNumber = $("#phone-number").val();
+    var itemSelect = $("#job").val();
+    var hearingSource = $("#item-hearing-source").val();
+
+    if (businessPeriod == "") {
+      alert("Please select your business period.");
+    } else if (loanAmount == "") {
+      alert("Please enter your loan amount.");
+    } else if (firstName == "") {
+      alert("Please enter your first name.");
+    } else if (lastName == "") {
+      alert("Please enter your last name.");
+    } else if (emailAddress == "") {
+      alert("Please enter your email address.");
+    } else if (phoneNumber == "") {
+      alert("Please enter your phone number.");
+    } else if (itemSelect == "item1") {
+      alert("Please select your job role.");
+    } else if (hearingSource == "none") {
+      alert("Please select how you heard about Hebron Finance.");
+    } else {
+      // Submit form
+      this.submit();
+    }
+  });
+});

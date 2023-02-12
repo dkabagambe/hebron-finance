@@ -1,23 +1,62 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = 'info@hebronfinance.com'; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
- 
-    $first_name = $_POST['fname'];
-    $last_name = $_POST['lname'];
-    $age = $_POST['age'];
-  $newDate = date('Y-m-d');
- 
-    $telephone= $_POST['telephone'];
-    $telephon= $_POST['telephon'];
-  
+<?php
 
-    $subject = 'Form submission';
-    $message = $first_name . ' ' . $last_name .''. ' expressed interest   ' .''.' on '.''. $newDate .''. ' on '.''. $_POST['foster'] .''.' of a child aged btn '.$_POST['adopt'].' months '.''.    $last_name . 'is from '.''. $_POST['address'] .''.' aged '.$_POST['age'] .' years '.' is '.''. $_POST['marital'] .''.' emails are '. $_POST['email'] .' and '. $_POST['email1'] .''.' telephone numbers are : '. $telephone .' and '.  $telephon .'     motivation to Adopt : '.$_POST['subject1'] .''.'    where he had about adoption in uganda: '. $_POST['subject2'] .'      additional comments are: '. $_POST['subject3'];
+if(isset($_POST["submit"])){
+    $business_period = $_POST["business-period"];
+    $loan_amount = $_POST["loan-amount"];
+    $first_name = $_POST["first-name"];
+    $last_name = $_POST["last-name"];
+    $email_address = $_POST["email-address"];
+    $phone_number = $_POST["phone-number"];
+    $job_role = $_POST["job"];
+    $hearing_source = $_POST["item-hearing-source"];
+    $cname = $_POST["cname"];
+    $business_type = $_POST["business_type"];
+    $business_tax_id = $_POST["employee_count"];
+    $business_established = $_POST["established_date"];
+    $business_address = $_POST["address_line_1"];
+    $business_address1 = $_POST['address_line_2'];
+    $business_city = $_POST["city"];
+    $business_state = $_POST["business-state"];
+    $business_zip = $_POST["zip_code"];
+    $business_country = $_POST["country"];
+    $annual_revenue = $_POST["annual_sales"];
+    $time_in_business = $_POST["business_tenure"];
+    $industry = $_POST["industry"];
+    $number_of_employees = $_POST["number-of-employees"];
 
-    $headers = 'From:' . $from;
-    mail($to,$subject,$message,$headers);
-    echo 'Mail Sent. Thank you for showing interest in Dolphin' . $first_name . ', we will contact you shortly.';
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    $to = "info@hebronfinance.com";
+    $subject = "Business Loan Request";
+    $message = "A user has submitted a business loan request with the following details:
+    
+    Business Period: $business_period
+    Loan Amount: $loan_amount
+    First Name: $first_name
+    Last Name: $last_name
+    Email Address: $email_address
+    Phone Number: $phone_number
+    Job Role: $job_role
+    How did you hear about Hebron Finance?: $hearing_source
+    Company Name: $cname
+    Business Type: $business_type
+    Business Tax ID: $business_tax_id
+    Business Established: $business_established
+    Business Address: $business_address
+    Business Address1: $business_address1
+    Business City: $business_city
+    Business State: $business_state
+    Business Zip: $business_zip
+    Annual Revenue: $annual_revenue
+    Time in Business: $time_in_business
+    Industry: $industry
+    Number of Employees: $number_of_employees
+    ";
+    $headers = "From: $email_address";
+
+    if(mail($to, $subject, $message, $headers)){
+        echo "The email was sent successfully!";
+    }else{
+        echo "There was an error sending the email.";
     }
+}
+
 ?>

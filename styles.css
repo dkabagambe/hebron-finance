@@ -3110,6 +3110,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   cursor: pointer;
   transition: all 250ms ease-in-out;
   border: none;
+  width: 150px;
 }
 .form .btn:hover {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px blue;

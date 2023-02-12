@@ -237,44 +237,8 @@
       </div>
       <!-- ================================== -->
       <!-- <p>Step 1 of 4 -</p> -->
-      <!-- <form id="myForm">
-        <progress id="progressBar" value="0" max="100"></progress>
-        <div id="section1">
-          <! Input fields for section 1 -->
-      <!-- <label for="">How long have you been in business?</label>
-          <select id="item-select" name="item">
-            <option value="item1">-select-</option>
-            <option value="item2">Less than 12 months</option>
-            <option value="item3">Between 12 and 24 Months</option>
-            <option value="item3">More than 24 Months</option>
-          </select>
-          <div>
-            <label for="">Loan Amount</label>
-            <input
-              type="number"
-              id="number-input"
-              name="number"
-              placeholder="$50,000"
-            />
-          </div>
-        </div>
-        <div id="section2" style="display: none"> -->
-      <!-- Input fields for section 2 -->
-      <!-- </div>
-        <div id="section3" style="display: none"> -->
-      <!-- Input fields for section 3 -->
-      <!-- </div>
-        <div id="section4" style="display: none"> -->
-      <!-- Input fields for section 4 -->
-      <!-- </div>
-        <div id="button-container">
-          <button type="button" id="prevBtn" style="display: none">
-            Previous
-          </button>
-          <button type="button" id="nextBtn">Next</button>
-        </div>
-      </form> -->
-      <form action="" class="form">
+
+      <form  action="eligibility.php" method="post" class="form">
         <h1 class="text-center">Business loan request form</h1>
 
         <!-- -------progress bar------- -->
@@ -286,24 +250,29 @@
           <div class="progress-step" data-title="business"></div>
           <div class="progress-step" data-title="funds"></div>
         </div>
+
         <div class="form-step active">
           <div class="input-group">
-            <label for="item-select">How long have you been in business?</label>
-            <select id="item-select" name="item">
-              <option value="item1">-select-</option>
-              <option value="item2">Less than 12 months</option>
-              <option value="item3">Between 12 and 24 Months</option>
-              <option value="item3">More than 24 Months</option>
+            <label for="business-period"
+              >How long have you been in business?</label
+            >
+            <select id="business-period" name="business-period" required>
+              <option value="">-select-</option>
+              <option value="less-than-12-months">Less than 12 months</option>
+              <option value="12-to-24-months">Between 12 and 24 Months</option>
+              <option value="more-than-24-months">More than 24 Months</option>
             </select>
           </div>
+
           <div class="input-group">
-            <label for="lname">Loan Amount</label>
+            <label for="loan-amount">Loan Amount</label>
             <input
               type="number"
-              id="lname"
-              name="lname"
+              id="loan-amount"
+              name="loan-amount"
               placeholder="$50,000"
               min="$50,000"
+              required
             />
           </div>
           <div class="">
@@ -313,24 +282,30 @@
         <!-- ------------------------------------ -->
         <div class="form-step">
           <div class="input-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" />
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required />
           </div>
           <div class="input-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required />
           </div>
           <div class="input-group">
-            <label for="email">email</label>
-            <input type="email" id="email" name="email" />
+            <label for="email-address">email</label>
+            <input
+              type="email"
+              id="email-address"
+              name="email-address"
+              required
+            />
           </div>
           <div class="input-group">
-            <label for="phone">phone</label>
-            <input type="text" id="phone" name="phone" />
+            <label for="phone-number">phone</label>
+            <input type="text" id="phone-number" name="phone-number" required />
           </div>
+
           <div class="input-group">
             <label for="item-select">Job role</label>
-            <select id="item-select" name="item">
+            <select id="job" name="job" required>
               <option value="item1">-select-</option>
               <option value="item2">owner</option>
               <option value="item3">senior leader</option>
@@ -339,32 +314,33 @@
               <option value="item6">professor/student</option>
             </select>
           </div>
+
           <div class="input-group">
             <label for="item-select"
-              >How did your hear about Hebron Finance</label
+              >How did you hear about Hebron Finance?</label
             >
-            <select id="item-select" name="item">
-              <option value="item1">-select-</option>
-              <option value="item2">
-                professional(accountant,notary,lawyer,...)
+            <select id="item-select" name="item-hearing-source" required>
+              <option value="none">-select-</option>
+              <option value="professional">
+                Professional (Accountant, Notary, Lawyer, etc.)
               </option>
-              <option value="item3">
-                Enterprenuer,colleague,friend or family
+              <option value="entrepreneur">
+                Entrepreneur, Colleague, Friend, or Family
               </option>
-              <option value="item4">financial institution</option>
-              <option value="item5">Government</option>
-              <option value="item6">
-                website (other than hebronfinance.com)
+              <option value="financial-institution">
+                Financial Institution
               </option>
-              <option value="item7">social Media</option>
-              <option value="item8">web search</option>
-              <option value="item9">Online advertising</option>
-              <option value="item10">Print advertising</option>
-              <option value="item11">Events</option>
-              <option value="item12">Email</option>
-              <option value="item13">
-                other - specify(tv,radio,billboard,...)
+              <option value="government">Government</option>
+              <option value="website">
+                Website (other than HebronFinance.com)
               </option>
+              <option value="social-media">Social Media</option>
+              <option value="web-search">Web Search</option>
+              <option value="online-advertising">Online Advertising</option>
+              <option value="print-advertising">Print Advertising</option>
+              <option value="events">Events</option>
+              <option value="email1">Email</option>
+              <option value="other">Other (TV, Radio, Billboard, etc.)</option>
             </select>
           </div>
 
@@ -384,77 +360,117 @@
               id="cname"
               name="cname"
               placeholder="Name of your company"
+              required
             />
           </div>
           <div class="input-group">
-            <label for="item-select">Business Type</label>
-            <select id="item-select" name="item">
-              <option value="item1">-select-</option>
-              <option value="item2">sole proprietorship</option>
-              <option value="item3">General partnership</option>
-              <option value="item4">Company or Corporation(For Profit)</option>
-              <option value="item5">
-                Organization or Corporation( Not For Profit)
+            <label for="business-type-select">Business Type</label>
+            <select id="business-type-select" name="business_type" required>
+              <option value="">-select-</option>
+              <option value="sole_proprietorship">Sole Proprietorship</option>
+              <option value="general_partnership">General Partnership</option>
+              <option value="For_profit_corporation">
+                Company or Corporation (For Profit)
               </option>
-              <option value="item6">Cooperative</option>
-              <option value="item7">Limited Partnership</option>
+              <option value="Not_for_profit_corporation">
+                Organization or Corporation (Not For Profit)
+              </option>
+              <option value="Cooperative">Cooperative</option>
+              <option value="Limited_partnership">Limited Partnership</option>
             </select>
           </div>
+
           <div class="input-group">
-            <label for="item-select">Industry</label>
-            <select id="item-select" name="item">
-              <option value="item1">-select-</option>
-              <option value="item2">Business Services</option>
-              <option value="item3">Manufacturing</option>
-              <option value="item4">Construction & Engineering</option>
-              <option value="item5">Consulting Services</option>
-              <option value="item6">Energy</option>
-              <option value="item7">Financial Services</option>
-              <option value="item8">Retail</option>
-              <option value="item9">Accommodation and food services</option>
-              <option value="item10">Transport & warehousing</option>
-              <option value="item11">Technology</option>
-              <option value="item12">Tourism</option>
-              <option value="item13">Wholesale</option>
-              <option value="item14">Other</option>
+            <label for="industry-select">Industry</label>
+            <select id="industry-select" name="industry" required>
+              <option value="">-select-</option>
+              <option value="business-services">Business Services</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="construction-engineering">
+                Construction & Engineering
+              </option>
+              <option value="consulting-services">Consulting Services</option>
+              <option value="energy">Energy</option>
+              <option value="financial-services">Financial Services</option>
+              <option value="retail">Retail</option>
+              <option value="accommodation-food-services">
+                Accommodation and Food Services
+              </option>
+              <option value="transport-warehousing">
+                Transport & Warehousing
+              </option>
+              <option value="technology">Technology</option>
+              <option value="tourism">Tourism</option>
+              <option value="wholesale">Wholesale</option>
+              <option value="other2">Other</option>
             </select>
           </div>
+
           <div class="input-group">
-            <label for="dob">Established in</label>
-            <input type="date" id="dob" name="dob" />
+            <label for="established_date">Established in</label>
+            <input
+              type="date"
+              id="established_date"
+              name="established_date"
+              required
+            />
           </div>
           <div class="input-group">
-            <label for="id">Number of employees (including yourself)</label>
-            <input type="number" id="id" name="id" />
+            <label for="employee_count"
+              >Number of employees (including yourself)</label
+            >
+            <input
+              type="number"
+              id="employee_count"
+              name="employee_count"
+              required
+            />
           </div>
           <div class="input-group">
-            <label for="id">Annual Sales (in USD)</label>
-            <input type="number" id="id" name="id" placeholder="$" />
+            <label for="annual_sales">Annual Sales (in USD)</label>
+            <input
+              type="number"
+              id="annual_sales"
+              name="annual_sales"
+              placeholder="$"
+              required
+              aria-label="Annual Sales"
+            />
           </div>
           <p>address</p>
           <div class="input-group">
-            <label for="address">Address Line 1</label>
-            <input type="text" id="id" name="address" />
+            <label for="address_line_1">Address Line 1</label>
+            <input
+              type="text"
+              id="address_line_1"
+              name="address_line_1"
+              required
+            />
           </div>
           <div class="input-group">
-            <label for="address">Address Line 2</label>
-            <input type="text" id="id" name="address" />
+            <label for="address_line_2">Address Line 2</label>
+            <input
+              type="text"
+              id="address_line_2"
+              name="address_line_2"
+              required
+            />
           </div>
           <div class="input-group">
-            <label for="address">City</label>
-            <input type="text" id="id" name="address" />
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required />
           </div>
           <div class="input-group">
-            <label for="address">State</label>
-            <input type="text" id="id" name="address" />
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required />
           </div>
           <div class="input-group">
-            <label for="address">Zip Code</label>
-            <input type="text" id="id" name="address" />
+            <label for="zip_code">Zip Code</label>
+            <input type="text" id="zip_code" name="zip_code" required />
           </div>
           <div class="input-group">
-            <label for="address">Country</label>
-            <input type="text" id="id" name="address" />
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required />
           </div>
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
@@ -465,21 +481,27 @@
         <div class="form-step">
           <h3>When do you need the funds?</h3>
           <div class="input-group">
-            <label for="item-select">How long have you been in business?</label>
-            <select id="item-select" name="item">
-              <option value="item1">-select-</option>
-              <option value="item2">Less than 12 months</option>
-              <option value="item3">Between 12 and 24 Months</option>
-              <option value="item3">More than 24 Months</option>
+            <label for="business_tenure"
+              >How long have you been in business?</label
+            >
+            <select id="business_tenure" name="business_tenure" required>
+              <option value="select">-select-</option>
+              <option value="less_than_12_months">Less than 12 months</option>
+              <option value="between_12_24_months">
+                Between 12 and 24 Months
+              </option>
+              <option value="more_than_24_months">More than 24 Months</option>
             </select>
           </div>
           <div class="input-group">
-            <label for="confirmPassword">
+            <label for="project_description">
               Tell us about your project and how the loan will be used</label
             >
             <textarea
-              name=""
-              placeholder="short and precise ,please"
+              id="project_description"
+              name="project_description"
+              placeholder="Short and precise, please."
+              required
             ></textarea>
           </div>
           <div class="input-group">
@@ -492,10 +514,12 @@
             >
               <input
                 type="checkbox"
-                id="myCheckbox"
+                id="consent_to_store"
+                name="consent_to_store"
                 style="height: 40px; width: 40px; margin-right: 10px"
+                required
               />
-              <label for="myCheckbox" style="margin-left: 15px">
+              <label for="consent_to_store" style="margin-left: 15px">
                 I consent to have this website store my submitted information so
                 they can respond to my inquiry</label
               >
@@ -511,18 +535,24 @@
             >
               <input
                 type="checkbox"
-                id="myCheckbox"
+                id="terms_and_privacy_agreement"
+                name="terms_and_privacy_agreement"
                 style="height: 40px; width: 40px; margin-right: 10px"
+                required
               />
-              <label for="myCheckbox" style="margin-left: 15px">
+              <label
+                for="terms_and_privacy_agreement"
+                style="margin-left: 15px"
+              >
                 I have read and agree to the Terms and Conditions and Privacy
                 Policy</label
               >
             </div>
           </div>
+
           <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
-            <input type="submit" value="submit" class="btn" />
+            <input type="submit" value="submit" name="submit" class="btn" />
           </div>
         </div>
       </form>
@@ -606,7 +636,7 @@
       <!-- the end of the first four coloumns on footer -->
       <!-- the subscribe button -->
       <div class="subscribe">
-        <form action="">
+        <form action="./eligibility.php">
           <input type="text" placeholder="your email address" />
           <button>subscribe</button>
         </form>
@@ -1001,6 +1031,7 @@
       </div>
       <!-- ================================ -->
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
