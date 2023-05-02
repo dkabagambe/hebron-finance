@@ -253,9 +253,9 @@ nav ul li button:hover {
   padding-top: 25px;
   top: 12vh;
   position: relative;
-  margin: 2px 15px;
+  margin: 2px 5px;
   height: auto;
-  width: 100%;
+  width: 99%;
   background-image: url("images/ladypc.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -272,27 +272,28 @@ nav ul li button:hover {
   text-align: left;
 }
 .content-wrap > .heading {
-  font-family: "Verdana", Sans-serif;
+  font-family: serif;
   padding-top: 18px;
   font-weight: 700;
-  font-size: 60px;
-  color: #000000;
+  font-size: 45px;
+  color: #111222;
   justify-self: flex-end;
   align-self: flex-start;
   text-align: left;
-  line-height: 1.2em;
-  letter-spacing: 1.7px;
   text-transform: uppercase;
   font-style: normal;
 }
-.content-wrap > .text {
-  color: #fb9405;
-  font-family: dosis;
-  text-align: left;
-  font-size: 40px;
-  font-weight: 500;
+.content-wrap > p {
+  color: rgb(76, 0, 254) !important;
+  font-family: garamond;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.9;
   text-transform: lowercase;
   font-style: normal;
+  font-weight: 650;
+  padding: 5px 15px;
+  align-self: flex-start;
 }
 .heading,
 .text,
@@ -311,6 +312,7 @@ nav ul li button:hover {
   text-align: center;
   align-self: center;
   justify-self: flex-end;
+  margin-bottom: 30px;
 }
 .content-wrap .button:hover {
   background-color: rgb(76, 0, 254);
@@ -329,11 +331,12 @@ nav ul li button:hover {
   font-family: garamond;
   font-size: 18px;
 }
-@media (max-width: 850px) {
+@media (max-width: 650px) {
   .home {
     top: 10vh;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-right: 10px;
+    width: 98%;
   }
   .content-wrap {
     justify-content: center;
@@ -341,11 +344,12 @@ nav ul li button:hover {
     margin: 0 !important;
   }
   .content-wrap > .heading {
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 30px;
   }
-  .content-wrap > .text {
+  .content-wrap > p {
     font-size: 20px;
+    margin: 20px;
+    color: rgb(76, 0, 254) !important;
   }
   .content-wrap > .button {
     border-radius: 10px;
@@ -356,7 +360,7 @@ nav ul li button:hover {
 }
 .home2 {
   height: auto;
-  width: 100%;
+  width: 90%;
   position: relative;
   display: grid;
   place-items: center;
@@ -365,16 +369,15 @@ nav ul li button:hover {
 .home2 > h2 {
   color: #000000;
   font-family: serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
   text-transform: none;
   font-style: normal;
   line-height: 2;
-  letter-spacing: 1.6px;
   text-align: center;
   justify-self: center;
   align-self: center;
-  margin-top: 55px;
+  margin-top: 65px;
 }
 .home2 > p {
   font-size: 2rem;
@@ -428,7 +431,7 @@ nav ul li button:hover {
   align-items: center;
   text-decoration: none !important;
 }
-@media (max-width: 850px) {
+@media (max-width: 650px) {
   .home3 {
     display: flex;
     flex-direction: column;
